@@ -1,0 +1,43 @@
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<a style="background-color: #c028b9; color: white; text-decoration: none; padding: 2% 3%; border-radius: 999px" href="#" id="downloadLink">Download email html</a>
+
+    <script>
+  function downloadInnerHtml(filename, elId, mimeType) {
+    var elHtml = document.getElementById(elId).outerHTML;
+    var link = document.createElement('a');
+    mimeType = mimeType || 'text/html';
+
+    link.setAttribute('download', filename);
+    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click(); 
+}
+
+var fileName =  'emailName_renameMe.html'; 
+        
+        $('#downloadLink').click(function(){
+    downloadInnerHtml(fileName, 'emailPreview','text/html');
+});
+    </script>
+
+        <div id="emailPreviewWrapper" class="emailPreviewWrapper"  style="width: 50%; float: right; position:relative;">
+            
+        <div id="emailPreview">
+       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.ooorg/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http:www.w3.org/1999/xhtml">
+
+<head>
+<style></style>
+</head>
+<table>
+<tr>
+<td> Email Content</td>
+</tr>
+</table>
+</html>
+
+            </div>
+</div>

@@ -1,0 +1,285 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
+    <script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+						
+    
+    <div class="builderContainer" style="width: 100%; display: inline-block;">
+    <div class="builderInput" style="position:fixed;width: 50%;">
+        
+        <script>
+function appendBanner() {
+    
+  var table1 ="</table><!--SUBMESSAGE--><table id='bottomBanner' border='0' cellspacing='0' cellpadding='0' width='600' class='100p'><table id='' border='0' cellspacing='0' cellpadding='0' width='600' class='100p'><tbody><tr><td style='border-collapse: collapse;' id='100p' width='600'><a class='submessageLink' href='https://www.pens.com/month-of-thanks?promo=7DDA01?utm_source={(meta:utm_source)}&utm_medium={(meta:utm_medium)}&utm_campaign={(meta:utm_campaign)}&utm_term=guarantee&npid={(hashed_email)}' data-link-name='cta-image' style='display: block; width: 100%; text-decoration: none;'><!--Desktop--><img alt='Missed a deal? Get 10% off + free setup' class='bottomBannerImage' id='hideMobile' src='https://is1.pens.com/is/image/NatPenVegas/2021MOT_Deco-Footer?qlt=100' width='600'></a></td></tr></tbody></table><table border='0' cellspacing='0' cellpadding='0' width='600' class='100p'><tbody><tr><td style='border-collapse: collapse;' class='hideDesktop' id='100p' width='600'><a class='submessageLink' href='https://www.pens.com/month-of-thanks?promo=7DDA01?utm_source={(meta:utm_source)}&utm_medium={(meta:utm_medium)}&utm_campaign={(meta:utm_campaign)}&utm_term=guarantee&npid={(hashed_email)}' data-link-name='cta-image' style='width: 100%; text-decoration: none;'><!--Mobile--><img class='bottomMobileBannerImage' alt='Missed a deal? Get 10% off + free setup' style='display:none' id='hideDesktop' src='https://is1.pens.com/is/image/NatPenVegas/2021MOT_Deco-Footer_Res?qlt=100' width='600'></a></td></tr></tbody></table></table>";        // Create text with HTML
+  $("table#mainImage").append(table1);// Append new elements
+}
+            
+function removeAppendBanner() {
+   var bottomBanner = document.getElementById('bottomBanner');
+bottomBanner.remove();
+
+}           
+   
+            
+            $(document).ready(function() {
+    $("#submit").click(function() {
+        $("a.mainLink").prop("href",(linkInput).value + "?utm_source={(meta:utm_source)}&utm_medium={(meta:utm_medium)}&utm_campaign={(meta:utm_campaign)}&utm_term=guarantee&npid={(hashed_email)}");
+        console.log("Hyperlink Changed");
+    })
+});
+        $(document).ready(function() {
+    $("#submitSubLink").click(function() {
+        $("a.submessageLink").prop("href",(submessageLinkInput).value + "?utm_source={(meta:utm_source)}&utm_medium={(meta:utm_medium)}&utm_campaign={(meta:utm_campaign)}&utm_term=guarantee&npid={(hashed_email)}");
+        console.log("Hyperlink Changed");
+    })
+});        
+             $(document).ready(function() {
+    $("#submitDesktopMainImage").click(function() {
+        $("img.desktopMainImage").prop("src",(desktopMainImageInput).value);
+       
+    })
+});
+                  
+             $(document).ready(function() {
+    $("#submitMobileMainImage").click(function() {
+        $("img.mobileMainImage").prop("src",(mobileMainImageInput).value);
+       
+    })
+});
+            $(document).ready(function() {
+    $("#submitBottomBannerImage").click(function() {
+        $("img.bottomBannerImage").prop("src",(bottomBannerImageInput).value);
+       
+    })
+});
+              $(document).ready(function() {
+    $("#submitBottomMobileBannerImage").click(function() {
+        $("img.bottomMobileBannerImage").prop("src",(bottomMobileBannerImageInput).value);
+       
+    })
+});
+            
+            function changeLinkFuntion() {
+  var changeLink = document.getElementById("iframe .linkInput").value;
+}
+             function changeSubLinkFuntion() {
+  var changeSubLink = document.getElementById("submessageLinkInput").value;
+}
+            
+</script>
+        <style>
+            .builderInput{
+                background-color: #fff;
+                color: black;
+                height: 100%;
+                margin: auto;
+                align-content: center;
+                font-family: red hat text;
+            }
+            .emailBuilderInput{
+               border: none;
+                
+                padding: 1% 2%;
+                background-color:#f2f2f2;
+                width:80%;
+            }
+            button.submit{
+                background-color: black;
+                color: white;
+                font-family: red hat text;
+                border-radius:  0px 999px 999px 0px ;
+                border: none;
+                padding: .71% 2%;
+                
+            }
+              button.submitAlone{
+                background-color: black;
+                color: white;
+                font-family: red hat text;
+                border-radius:  999px 999px 999px 999px ;
+                border: none;
+                padding: .71% 2%;
+                
+            }
+            div.inputsContainer{
+                padding: 3%;
+            }
+            
+            @media screen and (max-width:600px){
+                .builderInput {
+                    width: 100%;
+                    display: block;
+                    flex-direction: column-reverse;
+                    flex-wrap: wrap;
+                    display: none;
+                }
+                 .builderContainer {
+                    width: 100%;
+                     flex-wrap: wrap-reverse;
+                    
+                }
+                .emailPreviewWrapper{
+                    width: 100% !important;
+                     float:none;
+                }
+            }
+        </style>
+        
+        <iframe id="myFrame" src="12DOC_Day4.html" style="height:380px;width:100%"></iframe>
+
+<p>Click the "Tryit" button to hide the first H1 element in the iframe (another document).</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<script>
+function myFunction3() {
+  var iframe3 = document.getElementById("myFrame");
+  var elmnt3 = iframe3.contentWindow.document.getElementsByTagName("h1")[0];
+  elmnt3.style.display = "none";
+}
+</script>
+        
+         <div class="inputsContainer">
+             <h1>NPC Email Builder</h1>
+     <script>
+             document.addEventListener('contextmenu', event => event.preventDefault());
+
+    var URL = window.URL || window.webkitURL
+
+window.swapImage = function (elm) {
+  var index = elm.dataset.index
+  // URL.createObjectURL is faster then using the filereader with base64
+  var url = URL.createObjectURL(elm.files[0])
+  document.querySelector('iframe[data-index="'+index+'"]').src = url
+}
+             </script>
+             <label>Upload email<input type="file" data-index="0" onChange="swapImage(this)"></label>
+          
+             
+             
+             
+        <label class="inputs">Preheader Copy<br><input class="emailBuilderInput" type="textarea" id="preheaderCopyInput" onkeyup="preheaderCopyFunction()"></label><br>
+        <label class="inputs"><br>Main  Link<br><input class="emailBuilderInput" id="linkInput" type="text" onkeyup="changeLinkFuntion()"></label><button class="submit" id="submit">Change Link</button><br>
+        <label class="inputs"><br>Blue Bar Copy<br><input class="emailBuilderInput" type="textarea" id="blueBarCopyInput" onkeyup="blueBarCopyFunction()"></label>
+    <br>
+    
+
+          <label class="inputs"><br>Desktop Main Image<br><input class="emailBuilderInput" id="desktopMainImageInput" type="text"></label>
+         <button class="submit" id="submitDesktopMainImage">Submit</button>
+        <br>
+        <br>
+        <label class="inputs">Mobile Main Image<br><input class="emailBuilderInput" id="mobileMainImageInput" type="text"></label>
+         <button class="submit" id="submitMobileMainImage">Submit</button>
+        <br>
+        <br>
+             
+    
+        <button class="submitAlone" onclick="appendBanner()">Add Bottom Banner</button>
+       
+        <button class="submitAlone" onclick="removeAppendBanner()">Remove Bottom Banner</button>
+        <br><br>
+        <label class="inputs">Submessage Banner Image<br><input class="emailBuilderInput" id="bottomBannerImageInput" type="text"></label>
+         <button class="submit" id="submitBottomBannerImage">Submit</button>
+        <br>
+             <label class="inputs">Submessage Mobile Banner Image<br><input class="emailBuilderInput" id="bottomMobileBannerImageInput" type="text"></label>
+         <button class="submit" id="submitBottomMobileBannerImage">Submit</button>
+        <br>
+     <label class="inputs"><br>Submessage Link<br><input class="emailBuilderInput" id="submessageLinkInput" type="text" onkeyup="changeSubLinkFuntion()"></label><button class="submit" id="submitSubLink">Change Sub Link</button><br>
+        
+ 
+    
+  <script type="text/javascript" src="https://js.nicedit.com/nicEdit-latest.js"></script>
+
+  <!--<script type="text/javascript">
+ 
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+  </script>
+  <h4>
+    Body Copy Text Area
+  </h4>
+ <form id="test"><textarea id="bodyCopyInput" style="width:600px;"></textarea></form>
+            <button class="submitAlone" type="button" class="button">Insert Body Copy</button><br>
+            
+          <script>
+            
+         bkLib.onDomLoaded(nicEditors.allTextAreas);
+$(document).ready(function() {
+    $('.button').click(function() {
+        var data = $('#test').find('.nicEdit-main').html();
+        document.getElementById("bodyCopy").innerHTML = data;
+        
+    });
+       
+            </script>  
+            
+            <script>
+function test() {
+  var bc = document.getElementById("bodyCopyInput").value;
+  document.getElementById("bodyCopy").innerHTML = bc;
+}
+
+</script>
+
+-->
+
+    <br>
+ 
+   <label>Disclaimer Copy<br><input class="emailBuilderInput" type="textarea" id="disclaimerCopyInput" onkeyup="disclaimerCopyFunction()"></label><br>
+        <br><br>
+
+        
+						
+              <a style="background-color: #c028b9; color: white; text-decoration: none; padding: 2% 3%; border-radius: 999px" href="#" id="downloadLink">Download email html</a>
+ <style>
+     .floatRight{
+         float:right;
+     }
+             </style>       
+        
+    
+    <script>
+  function downloadInnerHtml(filename, elId, mimeType) {
+    var elHtml = document.getElementById(elId).innerHTML;
+    var link = document.createElement('a');
+    mimeType = mimeType || 'text/html';
+
+    link.setAttribute('download', filename);
+    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click(); 
+}
+
+var fileName =  'emailName_renameMe.html'; // You can use the .txt extension if you want
+        
+        $('#downloadLink').click(function(){
+    downloadInnerHtml(fileName, 'emailInnerHTML','text/html');
+});
+    </script>
+  </div>
+        </div>
+        <div id="emailPreviewWrapper" class="emailPreviewWrapper"  style="width: 50%; float: right; position:relative;">
+            
+        <div id="emailPreview">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var newDiv, iframe;
+    newDiv = document.createElement("div");
+    iframe = document.createElement("IFRAME");
+    iframe.setAttribute("src", "12DOC_Day4.html");;
+      iframe.setAttribute("width", "700");;
+      iframe.setAttribute("height", "100%");;
+      iframe.setAttribute("id", "emailIframe");;
+      iframe.classList.add("floatRight");;
+      iframe.setAttribute("data-index", "0");;
+      iframe.setAttribute("contenteditable", "true");;
+      
+    $(iframe).appendTo($(newDiv));
+    $(newDiv).appendTo($('body'));
+  });
+</script>
+
+        </div></div>
+    </div>
+</html>
